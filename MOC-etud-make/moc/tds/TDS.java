@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * une TDS hiérarchique.
+ * La Table Des Symboles
  * 
- * @author marcel
+ * @author BOUAYAD, PRIEUL
  * 
  */
 public class TDS extends HashMap<String, INFO> {
@@ -43,8 +43,8 @@ public class TDS extends HashMap<String, INFO> {
 	/**
 	 * Recherche de n dans la TDS courante uniquement
 	 * 
-	 * @param n
-	 * @return
+	 * @param n le nom de la variable pour laquelle on recherche une info
+	 * @return l'INFO que l'on recherche ou null si non trouvee
 	 */
 	public INFO chercherLocalement(String n) {
 		return get(n);
@@ -53,14 +53,16 @@ public class TDS extends HashMap<String, INFO> {
 	/**
 	 * Recherche de n dans la TDS courante et ses parentes.
 	 * 
-	 * @param n
-	 * @return
+	 * @param n le nom de la variable pour laquelle on recherche une info
+	 * @return l'INFO que l'on recherche ou null si non trouvee
 	 */
 	public INFO chercherGlobalement(String n) {
 		INFO i = chercherLocalement(n);
-		if (i == null)
-			if (parente != null)
+		if (i == null) {
+			if (parente != null) {
 				return parente.chercherGlobalement(n);
+			}
+		}
 		return i;
 	}
 

@@ -6,10 +6,20 @@ import moc.type.DTYPE;
 /**
  * Cette classe décrit une variable locale : adresse et type
  * 
- * @author marcel
+ * @author BOUAYAD, PRIEUL
  * 
  */
-public class INFOVAR implements INFO {
+public class INFOVAR implements INFO { 
+
+	/**
+	 * L'initialisation ou non de la variable
+	 */
+	protected boolean init;
+
+	public boolean getInit() {
+	  	return init;
+	}
+
 	/**
 	 * Le type de la variable
 	 */
@@ -20,7 +30,7 @@ public class INFOVAR implements INFO {
 	}
 
 	/**
-	 * Represnete un emplacement memoire : depend de la machine
+	 * Represente un emplacement memoire : depend de la machine
 	 * 
 	 */
 	protected Emplacement empl;
