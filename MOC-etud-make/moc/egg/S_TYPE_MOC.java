@@ -20,15 +20,23 @@ LEX_MOC scanner;
     }
 int [] sync= new int[0];
   boolean att_eval;
+  TDS att_tds;
   LEX_MOC att_scanner;
   private void regle10() throws Exception {
 
     //declaration
-    S_STYPE_MOC x_2 = new S_STYPE_MOC(scanner,att_eval) ;
-    S_REFS_MOC x_3 = new S_REFS_MOC(scanner,att_eval) ;
+    S_STYPE_MOC x_3 = new S_STYPE_MOC(scanner,att_eval) ;
+    S_REFS_MOC x_4 = new S_REFS_MOC(scanner,att_eval) ;
     //appel
-    x_2.analyser() ;
+if  (att_eval)      action_type_10(x_3, x_4);
     x_3.analyser() ;
+    x_4.analyser() ;
+  }
+private void action_type_10(S_STYPE_MOC x_3, S_REFS_MOC x_4) throws Exception {
+try {
+// instructions
+}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#type","TYPE -> #type STYPE REFS ;"});
+}
   }
   public void analyser () throws Exception {
     regle10 () ;

@@ -21,6 +21,7 @@ LEX_MOC scanner;
 int [] sync= new int[0];
   boolean att_eval;
   IMachine att_machine;
+  TDS att_tds;
   LEX_MOC att_scanner;
   private void regle6() throws Exception {
 
@@ -48,16 +49,16 @@ x_3.att_machine=this.att_machine;
   public void analyser () throws Exception {
     scanner.lit ( 1 ) ;
     switch ( scanner.fenetre[0].code ) {
-      case LEX_MOC.token_parf : // 26
+      case LEX_MOC.token_parf : // 27
         regle5 () ;
       break ;
-      case LEX_MOC.token_void : // 34
+      case LEX_MOC.token_void : // 35
         regle6 () ;
       break ;
-      case LEX_MOC.token_int : // 36
+      case LEX_MOC.token_int : // 37
         regle6 () ;
       break ;
-      case LEX_MOC.token_char : // 37
+      case LEX_MOC.token_char : // 38
         regle6 () ;
       break ;
       default :

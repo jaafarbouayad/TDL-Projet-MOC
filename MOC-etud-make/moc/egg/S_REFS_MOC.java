@@ -38,13 +38,13 @@ int [] sync= new int[0];
   public void analyser () throws Exception {
     scanner.lit ( 1 ) ;
     switch ( scanner.fenetre[0].code ) {
-      case LEX_MOC.token_ident : // 58
+      case LEX_MOC.token_ident : // 59
         regle11 () ;
       break ;
-      case LEX_MOC.token_parf : // 26
+      case LEX_MOC.token_parf : // 27
         regle11 () ;
       break ;
-      case LEX_MOC.token_mult : // 50
+      case LEX_MOC.token_mult : // 51
         regle12 () ;
       break ;
       default :

@@ -50,43 +50,43 @@ x_4.att_machine=this.att_machine;
   public void analyser () throws Exception {
     scanner.lit ( 1 ) ;
     switch ( scanner.fenetre[0].code ) {
-      case LEX_MOC.token_plus : // 47
+      case LEX_MOC.token_plus : // 48
         regle40 () ;
       break ;
-      case LEX_MOC.token_moins : // 48
+      case LEX_MOC.token_moins : // 49
         regle40 () ;
       break ;
-      case LEX_MOC.token_ou : // 49
+      case LEX_MOC.token_ou : // 50
         regle40 () ;
       break ;
-      case LEX_MOC.token_inf : // 41
+      case LEX_MOC.token_inf : // 42
         regle41 () ;
       break ;
-      case LEX_MOC.token_sup : // 43
+      case LEX_MOC.token_sup : // 44
         regle41 () ;
       break ;
-      case LEX_MOC.token_infeg : // 42
+      case LEX_MOC.token_infeg : // 43
         regle41 () ;
       break ;
-      case LEX_MOC.token_supeg : // 44
+      case LEX_MOC.token_supeg : // 45
         regle41 () ;
       break ;
-      case LEX_MOC.token_eg : // 45
+      case LEX_MOC.token_eg : // 46
         regle41 () ;
       break ;
-      case LEX_MOC.token_neg : // 46
+      case LEX_MOC.token_neg : // 47
         regle41 () ;
       break ;
-      case LEX_MOC.token_affect : // 31
+      case LEX_MOC.token_affect : // 32
         regle41 () ;
       break ;
-      case LEX_MOC.token_virg : // 29
+      case LEX_MOC.token_virg : // 30
         regle41 () ;
       break ;
-      case LEX_MOC.token_parf : // 26
+      case LEX_MOC.token_parf : // 27
         regle41 () ;
       break ;
-      case LEX_MOC.token_pv : // 30
+      case LEX_MOC.token_pv : // 31
         regle41 () ;
       break ;
       default :

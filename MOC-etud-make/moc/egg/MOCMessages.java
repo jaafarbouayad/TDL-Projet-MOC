@@ -17,6 +17,7 @@ public class MOCMessages extends NLS {
 
   public static  String MOC_expected_eof;
   public static  String MOC_unexpected_token;
+  public static  String B_00;
   public static  String NO_MACH;
   public static  String MOC_expected_token;
   }

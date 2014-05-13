@@ -27,6 +27,7 @@ int [] sync= new int[0];
     T_MOC x_2 = new T_MOC(scanner ) ;
     //appel
     x_2.analyser(LEX_MOC.token_int);
+if  (att_eval)      action_type_14();
   }
   private void regle15() throws Exception {
 
@@ -34,6 +35,7 @@ int [] sync= new int[0];
     T_MOC x_2 = new T_MOC(scanner ) ;
     //appel
     x_2.analyser(LEX_MOC.token_char);
+if  (att_eval)      action_type_15();
   }
   private void regle13() throws Exception {
 
@@ -41,17 +43,36 @@ int [] sync= new int[0];
     T_MOC x_2 = new T_MOC(scanner ) ;
     //appel
     x_2.analyser(LEX_MOC.token_void);
+if  (att_eval)      action_type_13();
+  }
+private void action_type_15() throws Exception {
+try {
+// instructions
+}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#type","STYPE -> char #type ;"});
+}
+  }
+private void action_type_14() throws Exception {
+try {
+// instructions
+}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#type","STYPE -> int #type ;"});
+}
+  }
+private void action_type_13() throws Exception {
+try {
+// instructions
+}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#type","STYPE -> void #type ;"});
+}
   }
   public void analyser () throws Exception {
     scanner.lit ( 1 ) ;
     switch ( scanner.fenetre[0].code ) {
-      case LEX_MOC.token_void : // 34
+      case LEX_MOC.token_void : // 35
         regle13 () ;
       break ;
-      case LEX_MOC.token_int : // 36
+      case LEX_MOC.token_int : // 37
         regle14 () ;
       break ;
-      case LEX_MOC.token_char : // 37
+      case LEX_MOC.token_char : // 38
         regle15 () ;
       break ;
       default :

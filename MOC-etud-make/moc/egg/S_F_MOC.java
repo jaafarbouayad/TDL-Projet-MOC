@@ -59,15 +59,16 @@ if  (att_eval)      action_auto_inh_60(x_3);
 
     //declaration
     T_MOC x_2 = new T_MOC(scanner ) ;
-    S_TYPE_MOC x_3 = new S_TYPE_MOC(scanner,att_eval) ;
-    T_MOC x_4 = new T_MOC(scanner ) ;
-    S_F_MOC x_5 = new S_F_MOC(scanner,att_eval) ;
+    S_TYPE_MOC x_4 = new S_TYPE_MOC(scanner,att_eval) ;
+    T_MOC x_5 = new T_MOC(scanner ) ;
+    S_F_MOC x_6 = new S_F_MOC(scanner,att_eval) ;
     //appel
-if  (att_eval)      action_auto_inh_61(x_3, x_5);
+if  (att_eval)      action_auto_inh_61(x_4, x_6);
     x_2.analyser(LEX_MOC.token_paro);
-    x_3.analyser() ;
-    x_4.analyser(LEX_MOC.token_parf);
-    x_5.analyser() ;
+if  (att_eval)      action_tds_61(x_4, x_6);
+    x_4.analyser() ;
+    x_5.analyser(LEX_MOC.token_parf);
+    x_6.analyser() ;
   }
   private void regle64() throws Exception {
 
@@ -131,6 +132,13 @@ x_3.att_machine=this.att_machine;
 }catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#auto_inh","F -> mult F1 ;"});
 }
   }
+private void action_tds_61(S_TYPE_MOC x_4, S_F_MOC x_6) throws Exception {
+try {
+// instructions
+x_4.att_tds=null;
+}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#tds","F -> paro #tds TYPE parf F1 ;"});
+}
+  }
 private void action_auto_inh_55(S_OPUN_MOC x_2, S_F_MOC x_3) throws Exception {
 try {
 // instructions
@@ -138,11 +146,11 @@ x_3.att_machine=this.att_machine;
 }catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#auto_inh","F -> OPUN F1 ;"});
 }
   }
-private void action_auto_inh_61(S_TYPE_MOC x_3, S_F_MOC x_5) throws Exception {
+private void action_auto_inh_61(S_TYPE_MOC x_4, S_F_MOC x_6) throws Exception {
 try {
 // instructions
-x_5.att_machine=this.att_machine;
-}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#auto_inh","F -> paro TYPE parf F1 ;"});
+x_6.att_machine=this.att_machine;
+}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#auto_inh","F -> paro #tds TYPE parf F1 ;"});
 }
   }
 private void action_auto_inh_60(S_E_MOC x_3) throws Exception {
@@ -155,67 +163,67 @@ x_3.att_machine=this.att_machine;
   public void analyser () throws Exception {
     scanner.lit ( 1 ) ;
     switch ( scanner.fenetre[0].code ) {
-      case LEX_MOC.token_entier : // 55
+      case LEX_MOC.token_entier : // 56
         regle52 () ;
       break ;
-      case LEX_MOC.token_chaine : // 57
+      case LEX_MOC.token_chaine : // 58
         regle53 () ;
       break ;
-      case LEX_MOC.token_caractere : // 56
+      case LEX_MOC.token_caractere : // 57
         regle54 () ;
       break ;
-      case LEX_MOC.token_plus : // 47
+      case LEX_MOC.token_plus : // 48
         regle55 () ;
       break ;
-      case LEX_MOC.token_moins : // 48
+      case LEX_MOC.token_moins : // 49
         regle55 () ;
       break ;
-      case LEX_MOC.token_non : // 54
+      case LEX_MOC.token_non : // 55
         regle55 () ;
       break ;
-      case LEX_MOC.token_null : // 39
+      case LEX_MOC.token_null : // 40
         regle59 () ;
       break ;
-      case LEX_MOC.token_paro : // 25
+      case LEX_MOC.token_paro : // 26
         scanner.lit ( 2 ) ;
         switch ( scanner.fenetre[1].code ) {
-          case LEX_MOC.token_entier : // 55
+          case LEX_MOC.token_entier : // 56
             regle60 () ;
           break ;
-          case LEX_MOC.token_chaine : // 57
+          case LEX_MOC.token_chaine : // 58
             regle60 () ;
           break ;
-          case LEX_MOC.token_caractere : // 56
+          case LEX_MOC.token_caractere : // 57
             regle60 () ;
           break ;
-          case LEX_MOC.token_plus : // 47
+          case LEX_MOC.token_plus : // 48
             regle60 () ;
           break ;
-          case LEX_MOC.token_moins : // 48
+          case LEX_MOC.token_moins : // 49
             regle60 () ;
           break ;
-          case LEX_MOC.token_non : // 54
+          case LEX_MOC.token_non : // 55
             regle60 () ;
           break ;
-          case LEX_MOC.token_null : // 39
+          case LEX_MOC.token_null : // 40
             regle60 () ;
           break ;
-          case LEX_MOC.token_paro : // 25
+          case LEX_MOC.token_paro : // 26
             regle60 () ;
           break ;
-          case LEX_MOC.token_ident : // 58
+          case LEX_MOC.token_ident : // 59
             regle60 () ;
           break ;
-          case LEX_MOC.token_mult : // 50
+          case LEX_MOC.token_mult : // 51
             regle60 () ;
           break ;
-          case LEX_MOC.token_void : // 34
+          case LEX_MOC.token_void : // 35
             regle61 () ;
           break ;
-          case LEX_MOC.token_int : // 36
+          case LEX_MOC.token_int : // 37
             regle61 () ;
           break ;
-          case LEX_MOC.token_char : // 37
+          case LEX_MOC.token_char : // 38
             regle61 () ;
           break ;
           default :
@@ -223,61 +231,61 @@ x_3.att_machine=this.att_machine;
 scanner.accepter_sucre(LEX_MOC.token_paro);
         }
       break ;
-      case LEX_MOC.token_ident : // 58
+      case LEX_MOC.token_ident : // 59
         scanner.lit ( 2 ) ;
         switch ( scanner.fenetre[1].code ) {
-          case LEX_MOC.token_paro : // 25
+          case LEX_MOC.token_paro : // 26
             regle62 () ;
           break ;
-          case LEX_MOC.token_mult : // 50
+          case LEX_MOC.token_mult : // 51
             regle63 () ;
           break ;
-          case LEX_MOC.token_div : // 51
+          case LEX_MOC.token_div : // 52
             regle63 () ;
           break ;
-          case LEX_MOC.token_mod : // 52
+          case LEX_MOC.token_mod : // 53
             regle63 () ;
           break ;
-          case LEX_MOC.token_et : // 53
+          case LEX_MOC.token_et : // 54
             regle63 () ;
           break ;
-          case LEX_MOC.token_plus : // 47
+          case LEX_MOC.token_plus : // 48
             regle63 () ;
           break ;
-          case LEX_MOC.token_moins : // 48
+          case LEX_MOC.token_moins : // 49
             regle63 () ;
           break ;
-          case LEX_MOC.token_ou : // 49
+          case LEX_MOC.token_ou : // 50
             regle63 () ;
           break ;
-          case LEX_MOC.token_inf : // 41
+          case LEX_MOC.token_inf : // 42
             regle63 () ;
           break ;
-          case LEX_MOC.token_sup : // 43
+          case LEX_MOC.token_sup : // 44
             regle63 () ;
           break ;
-          case LEX_MOC.token_infeg : // 42
+          case LEX_MOC.token_infeg : // 43
             regle63 () ;
           break ;
-          case LEX_MOC.token_supeg : // 44
+          case LEX_MOC.token_supeg : // 45
             regle63 () ;
           break ;
-          case LEX_MOC.token_eg : // 45
+          case LEX_MOC.token_eg : // 46
             regle63 () ;
           break ;
-          case LEX_MOC.token_neg : // 46
+          case LEX_MOC.token_neg : // 47
             regle63 () ;
           break ;
-          case LEX_MOC.token_affect : // 31
+          case LEX_MOC.token_affect : // 32
             regle63 () ;
           break ;
-          case LEX_MOC.token_virg : // 29
+          case LEX_MOC.token_virg : // 30
             regle63 () ;
           break ;
-          case LEX_MOC.token_parf : // 26
+          case LEX_MOC.token_parf : // 27
             regle63 () ;
           break ;
-          case LEX_MOC.token_pv : // 30
+          case LEX_MOC.token_pv : // 31
             regle63 () ;
           break ;
           default :
@@ -285,7 +293,7 @@ scanner.accepter_sucre(LEX_MOC.token_paro);
 scanner.accepter_sucre(LEX_MOC.token_ident);
         }
       break ;
-      case LEX_MOC.token_mult : // 50
+      case LEX_MOC.token_mult : // 51
         regle64 () ;
       break ;
       default :

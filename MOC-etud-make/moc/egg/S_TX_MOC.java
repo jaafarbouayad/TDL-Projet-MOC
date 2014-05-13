@@ -50,55 +50,55 @@ x_4.att_machine=this.att_machine;
   public void analyser () throws Exception {
     scanner.lit ( 1 ) ;
     switch ( scanner.fenetre[0].code ) {
-      case LEX_MOC.token_mult : // 50
+      case LEX_MOC.token_mult : // 51
         regle46 () ;
       break ;
-      case LEX_MOC.token_div : // 51
+      case LEX_MOC.token_div : // 52
         regle46 () ;
       break ;
-      case LEX_MOC.token_mod : // 52
+      case LEX_MOC.token_mod : // 53
         regle46 () ;
       break ;
-      case LEX_MOC.token_et : // 53
+      case LEX_MOC.token_et : // 54
         regle46 () ;
       break ;
-      case LEX_MOC.token_plus : // 47
+      case LEX_MOC.token_plus : // 48
         regle47 () ;
       break ;
-      case LEX_MOC.token_moins : // 48
+      case LEX_MOC.token_moins : // 49
         regle47 () ;
       break ;
-      case LEX_MOC.token_ou : // 49
+      case LEX_MOC.token_ou : // 50
         regle47 () ;
       break ;
-      case LEX_MOC.token_inf : // 41
+      case LEX_MOC.token_inf : // 42
         regle47 () ;
       break ;
-      case LEX_MOC.token_sup : // 43
+      case LEX_MOC.token_sup : // 44
         regle47 () ;
       break ;
-      case LEX_MOC.token_infeg : // 42
+      case LEX_MOC.token_infeg : // 43
         regle47 () ;
       break ;
-      case LEX_MOC.token_supeg : // 44
+      case LEX_MOC.token_supeg : // 45
         regle47 () ;
       break ;
-      case LEX_MOC.token_eg : // 45
+      case LEX_MOC.token_eg : // 46
         regle47 () ;
       break ;
-      case LEX_MOC.token_neg : // 46
+      case LEX_MOC.token_neg : // 47
         regle47 () ;
       break ;
-      case LEX_MOC.token_affect : // 31
+      case LEX_MOC.token_affect : // 32
         regle47 () ;
       break ;
-      case LEX_MOC.token_virg : // 29
+      case LEX_MOC.token_virg : // 30
         regle47 () ;
       break ;
-      case LEX_MOC.token_parf : // 26
+      case LEX_MOC.token_parf : // 27
         regle47 () ;
       break ;
-      case LEX_MOC.token_pv : // 30
+      case LEX_MOC.token_pv : // 31
         regle47 () ;
       break ;
       default :

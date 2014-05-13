@@ -66,22 +66,22 @@ int [] sync= new int[0];
   public void analyser () throws Exception {
     scanner.lit ( 1 ) ;
     switch ( scanner.fenetre[0].code ) {
-      case LEX_MOC.token_inf : // 41
+      case LEX_MOC.token_inf : // 42
         regle33 () ;
       break ;
-      case LEX_MOC.token_sup : // 43
+      case LEX_MOC.token_sup : // 44
         regle34 () ;
       break ;
-      case LEX_MOC.token_infeg : // 42
+      case LEX_MOC.token_infeg : // 43
         regle35 () ;
       break ;
-      case LEX_MOC.token_supeg : // 44
+      case LEX_MOC.token_supeg : // 45
         regle36 () ;
       break ;
-      case LEX_MOC.token_eg : // 45
+      case LEX_MOC.token_eg : // 46
         regle37 () ;
       break ;
-      case LEX_MOC.token_neg : // 46
+      case LEX_MOC.token_neg : // 47
         regle38 () ;
       break ;
       default :

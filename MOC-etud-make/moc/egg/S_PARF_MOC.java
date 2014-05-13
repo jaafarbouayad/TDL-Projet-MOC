@@ -25,11 +25,19 @@ int [] sync= new int[0];
   private void regle9() throws Exception {
 
     //declaration
-    S_TYPE_MOC x_2 = new S_TYPE_MOC(scanner,att_eval) ;
-    T_MOC x_3 = new T_MOC(scanner ) ;
+    S_TYPE_MOC x_3 = new S_TYPE_MOC(scanner,att_eval) ;
+    T_MOC x_4 = new T_MOC(scanner ) ;
     //appel
-    x_2.analyser() ;
-    x_3.analyser(LEX_MOC.token_ident);
+if  (att_eval)      action_type_9(x_3, x_4);
+    x_3.analyser() ;
+    x_4.analyser(LEX_MOC.token_ident);
+  }
+private void action_type_9(S_TYPE_MOC x_3, T_MOC x_4) throws Exception {
+try {
+// instructions
+x_3.att_tds=null;
+}catch(RuntimeException e) {       att_scanner._interrompre(IProblem.Internal,att_scanner.getBeginLine(),ICoreMessages.id_EGG_runtime_error, CoreMessages.EGG_runtime_error,new Object[] { "MOC", "#type","PARF -> #type TYPE ident ;"});
+}
   }
   public void analyser () throws Exception {
     regle9 () ;
